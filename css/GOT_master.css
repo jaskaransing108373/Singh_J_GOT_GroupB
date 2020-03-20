@@ -16,7 +16,7 @@ body { background-image:url(../images/grungeBG.jpg);
 
 h1 {
 	font-family: 'GOT_font';
-	color:white;
+	color:red;
 	margin-top:30px;
 	font-size:1.25em;
 }
@@ -36,7 +36,7 @@ main {
   overflow:hidden;
 }
 
-#houseImages { position:relative; width:4000px; transition: all 2.0s; }
+#houseImages { position:relative; width:4000px; transition: all 1.0s; }
 #houseImages img { float:left; }
 
 #bottomNav { margin-top:30px; }
@@ -80,6 +80,16 @@ main {
 
 .arryn { background-position:-253px -54px; }
 .arryn:hover { background-position:-253px 0px; }
+
+.targaryen { background-position:-304px -54px; }
+.targaryen:hover { background-position:-304px 0px; }
+
+.tyrell { background-position:-355px -54px; }
+.tyrell:hover { background-position:-355px 0px; }
+
+.frey { background-position:-406px -54px; }
+.frey:hover { background-position:-406px 0px; }
+
 /* ----- end image sprite ----- */
 
 /* ----- classes for transitions ----- */
@@ -104,6 +114,7 @@ main {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.85);
   display: none;
+  text-align: center;
   /*eventually we will hide it by default
   display: none;
   */
@@ -126,6 +137,12 @@ video {
 	margin-top: 10%;
 	border: thin solid #949393;
 }
+.house-name {
+	font-size: 2.0rem;
+	letter-spacing: 1px;
+	margin-top: 50px;
+}
+
 .house-info {
   font-size: 1.5em;
   color: white;
