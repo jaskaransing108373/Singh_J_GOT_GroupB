@@ -6,7 +6,11 @@
       closeButton = lightbox.querySelector(".close-button"),
       currentHouseName = document.querySelector("h1"),
       houseDescription = document.querySelector(".house-info"),
-      imageContainer = document.querySelector("#houseImages");
+      imageContainer = document.querySelector("#houseImages"),
+      play = document.querySelector('.fa-google-play'),
+      pause = document.querySelector('.fa-pause'),
+		  rewind = document.querySelector('.fa-history'),
+      stop = document.querySelector('.fa-stop');
 
   const houseData = [
     ["Stark", `House Stark of Winterfell is a Great House of Westeros, ruling over the vast region known as the North from their seat in Winterfell. It is one of the oldest lines of Westerosi nobility by far, claiming a line of descent stretching back over eight thousand years. Before the Targaryen conquest, as well as during the War of the Five Kings and Daenerys Targaryen's invasion of Westeros, the leaders of House Stark ruled over the region as the Kings in the North.`],
@@ -80,7 +84,19 @@ House Baratheon became the royal house of the Seven Kingdoms after Robert Barath
       // change the style.left property to match the new position - were it needs to move to
       imageContainer.style.right = `${newPosition}px`;
     }
+       function pauseVid(){
+         houseVideo.pause();
+       }
 
+       function playVid(){
+         houseVideo.play();
+       }
+       function repeatVid(){
+         houseVideo.currentTime=0;
+       }
+       function stopVid(){
+         houseVideo.end();
+       }
   // event handling for our sigilbuttons
 //  sigilButtons.forEach(button => button.addEventListener("click", showLightBox));
 
@@ -95,4 +111,8 @@ House Baratheon became the royal house of the Seven Kingdoms after Robert Barath
   houseVideo.addEventListener("ended", hideLightBox);
 
   closeButton.addEventListener("click", hideLightBox);
+    play.addEventListener("click", playVid);
+    pause.addEventListener("click", pauseVid);
+		rewind.addEventListener("click", repeatVid);
+    stop.addEventListener("click", stopVid);
 })();
